@@ -1,0 +1,88 @@
+/* style.css - Mohsin Ali Portfolio */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f172a;
+  color: #f1f5f9;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #1e293b;
+  text-align: center;
+  padding: 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  color: #ffffff;
+}
+
+header p {
+  color: #94a3b8;
+  font-size: 1.2rem;
+}
+
+header img {
+  margin-top: 1rem;
+  border-radius: 50%;
+  width: 120px;
+  height: auto;
+  border: 2px solid #38bdf8;
+}
+
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: #38bdf8;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.project, .cert {
+  background-color: #1e293b;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #64748b;
+  border-top: 1px solid #334155;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  .project, .cert {
+    padding: 0.8rem;
+  }
+}
