@@ -6,61 +6,80 @@
   <title>Mohsin Ali | AI Developer Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #0f172a;
-      color: #f1f5f9;
-    }
-    header {
-      text-align: center;
-      padding: 2rem;
-      background: #1e293b;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #94a3b8;
-    }
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #38bdf8;
-      border-bottom: 1px solid #334155;
-      padding-bottom: 0.5rem;
-    }
-    .project, .cert {
-      background: #1e293b;
-      margin: 1rem 0;
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
       padding: 1rem;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+    nav a {
+      color: #f1f5f9;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #38bdf8;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+    nav a:hover,
+    nav a.active {
+      color: #38bdf8;
+    }
+    .resume-section {
+      background: #1e293b;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 900px;
       border-radius: 8px;
     }
-    a {
+    .resume-section h2 {
       color: #38bdf8;
-      text-decoration: none;
+      margin-bottom: 1rem;
     }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #64748b;
+    .resume-section iframe {
+      width: 100%;
+      height: 500px;
+      border: 2px solid #334155;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="#resume">Resume</a>
+  </nav>
+
   <header>
     <h1>Mohsin Ali</h1>
-    <p>Aspiring AI Developer | Prompt Engineer | Self-Taught Learner</p>
-    <img src="assets/profile.jpg" alt="Mohsin Ali" width="120" style="border-radius: 50%; margin-top: 1rem;" />
+    <p>Aspiring AI Developer</p>
+    <img src="assets/profile.jpg" alt="Mohsin Ali" width="120" />
   </header>
 
-  <section>
+  <section id="projects">
     <h2>✨ Projects</h2>
     <div class="project">
       <h3><a href="https://github.com/mnkgaming8/MNK-AI-Assistant">MNK AI Assistant v1</a></h3>
@@ -76,7 +95,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="certifications">
     <h2>📅 Certifications</h2>
     <div class="cert">
       <p><strong>Prompt Engineering</strong> – Simplilearn</p>
@@ -88,7 +107,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="skills">
     <h2>📊 Skills</h2>
     <p><strong>Languages:</strong> Python, HTML, CSS, JavaScript (basic)</p>
     <p><strong>AI Tools:</strong> ChatGPT, OpenRouter, DeepSeek, Cursor AI</p>
@@ -96,15 +115,22 @@
     <p><strong>Soft Skills:</strong> Problem Solving, Communication, Teamwork, Adaptability</p>
   </section>
 
-  <section>
+  <section id="contact" class="contact">
     <h2>📢 Contact</h2>
     <p>Email: <a href="mailto:mnkgaming8@gmail.com">mnkgaming8@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/mnkgaming8">github.com/mnkgaming8</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/mohsin-ali8">linkedin.com/in/mohsin-ali8</a></p>
   </section>
 
+  <section id="resume" class="resume-section">
+    <h2>📚 Resume</h2>
+    <iframe src="assets/MohsinAli_Resume.pdf" title="Mohsin Ali Resume"></iframe>
+  </section>
+
   <footer>
     <p>© 2025 Mohsin Ali. Built with love and Python.</p>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
